@@ -1,6 +1,7 @@
 /* start variables */
 :root{
-  --main-color: #10cab7
+  --main-color: #10cab7;
+  --background-color: #f6f6f6
 }
 /* end variables */
 /* start global rules */
@@ -78,7 +79,7 @@ body{
         list-style: none;
         margin: 0;
         padding: 0;
-        background-color: #f6f6f6;
+        background-color: var(--background-color);
         position: absolute;
         right: 0;
         top: calc(100% + 15px);
@@ -109,7 +110,7 @@ body{
         position: absolute;
         border-width: 10px;
         border-style: solid;
-        border-color: transparent transparent #f6f6f6 transparent;
+        border-color: transparent transparent var(--background-color) transparent;
         top: -20px;
         right: 5px;
       }
@@ -154,3 +155,35 @@ body{
   }
 }
 /* landing end */
+/* features start */
+.features{
+  padding-block: 60px;
+  background-color: var(--background-color);
+  .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+    div{
+      display: grid;
+      place-content: center;
+      text-align: center;
+      padding: 20px;
+      margin-top: 10px;
+      .fa-solid{
+        color: var(--main-color);
+      }
+      h2{
+        font-weight: 800;
+        font-size: 18.72px;
+        margin-top: 50px;
+      }
+      p{
+        font-size: 17px;
+        line-height: 1.8;
+        color: #777;
+      }
+    }
+  }
+  
+}
+/* features end */
