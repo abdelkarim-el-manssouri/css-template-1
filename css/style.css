@@ -9,7 +9,6 @@
 body{
   font-family: "Work Sans", sans-serif;
 }
-/* start global rules */
 .container{
   padding-inline: 15px;
   margin-inline: auto;
@@ -32,3 +31,94 @@ body{
     width: 1170px;
   }
 }
+/* end global rules */
+/* header start */
+  .header{
+    padding: 20px;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo{
+      width: 60px;
+    }
+    .links{
+      position: relative;
+      .burger-icon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 30px;
+        span{
+          height: 2px;
+          width: 100%;
+          margin-bottom: 5px; 
+          background-color: #333; 
+          border-radius: 10px;
+        }
+        span:first-child{
+          height: 2px;
+          width: 100%;
+        }
+        span:nth-child(2){
+          height: 2px;
+          width: 70%;
+          transition: .3s;
+        }
+        span:last-child{
+          height: 2px;
+          width: 100%;
+        }
+      }
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f6f6;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 15px);
+        min-width: 200px;
+        display: none;
+        z-index: 1;
+        li{
+          a{
+            display: block;
+            text-decoration: none;
+            padding: 15px;
+            color: #333;
+            transition: .3s ease-in;
+          }
+          a:hover{
+            transform: translateX(10px);
+          }
+        }
+        li:not(:last-child){
+          a{
+            border-bottom: solid 1px #ddd;
+          }
+        }
+      }
+      ul::before{
+        content: '';
+        position: absolute;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #f6f6f6 transparent;
+        top: -20px;
+        right: 5px;
+      }
+    }
+    .links:hover{
+      .burger-icon{
+        span:nth-child(2){
+          width: 100%;
+        }
+      }
+      ul {
+        display: block;
+      }
+    }
+  }
+/* header end */
