@@ -13,6 +13,13 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
+::selection{
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
 body{
   font-family: "Work Sans", sans-serif;
 }
@@ -441,3 +448,22 @@ body{
   }
 }
 /* contact end */
+/* footer start */
+footer{
+  padding: 30px 10px;
+  background-color: var(--secondary-color);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: white;
+  span{
+    font-weight: bold;
+    color: var(--main-color);
+  }
+}
+@media (max-width: 767px) {
+  footer{
+    font-size: 14px;
+  }
+}
+/* footer end */
